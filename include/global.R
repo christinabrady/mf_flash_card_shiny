@@ -15,6 +15,6 @@ updateTable <- function(con, var1, cardname){
     previous_correct + 1,
     total + 1,
     cardname)
-  sqlSave(con, qry)
+  sqlQuery(con, qry)
   # print(qry)
 }

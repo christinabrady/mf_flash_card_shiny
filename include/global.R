@@ -1,3 +1,6 @@
+### helper functions and global variables for this shiny app
+
+dbconnect <- readLines("include/dbconnect.txt")
 
 updateTable <- function(con, var1, cardname){
   card_dat <- sqlQuery(con,

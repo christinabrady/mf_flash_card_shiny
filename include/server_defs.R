@@ -1,6 +1,6 @@
 
 server <- function(input, output, session){
-  dbcon <- odbcConnect("ptracking")
+  dbcon <- odbcConnect(dbconnect)
   all_cards <- sqlFetch(dbcon, "ml_flash_cards")
 
   card_showing <- sample(all_cards$card, 1, replace = T)
